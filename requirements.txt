@@ -1,0 +1,8 @@
+langchain
+langchain-core
+langchain-mistralai
+python-dotenv
+langchain-community
+langchain-groq
+tavily-python 
+langchain-tavily
