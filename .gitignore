@@ -1,0 +1,22 @@
+# Keep files private by default, then allow the application source.
+*
+!.gitignore
+!app.py
+!City_Research_agent.py
+!Agents.py
+!requirements.txt
+!README.md
+!.env.example
+!static/
+!static/**
+!templates/
+!templates/**
+
+# Keep credentials and local environments private even if rules change later.
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]

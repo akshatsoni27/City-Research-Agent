@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CityScope | Research assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="CityScope home">
+        <span class="brand-mark">+</span>
+        <span>City<span class="brand-light">Scope</span></span>
+      </a>
+      <div class="status"><span class="status-dot"></span> LIVE RESEARCH MODE</div>
+    </header>
+
+    <main class="workspace">
+      <section class="intro">
+        <p class="eyebrow">CITY INTELLIGENCE / 01</p>
+        <h1>Ask better questions<br><em>about anywhere.</em></h1>
+        <p class="lede">A research assistant for the details that make a city feel current: weather, local news, and what is happening now.</p>
+      </section>
+
+      <section class="panel" aria-label="City research assistant">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">ASSISTANT CONSOLE</p>
+            <h2>What are you curious about?</h2>
+          </div>
+          <span class="model-tag">GROQ + TAVILY</span>
+        </div>
+
+        <div class="suggestions" aria-label="Suggested questions">
+          <button type="button" data-prompt="What is the current weather in Mumbai?">Weather in Mumbai</button>
+          <button type="button" data-prompt="What is the latest news in Bengaluru?">News in Bengaluru</button>
+          <button type="button" data-prompt="Give me a quick city brief for Delhi with current weather and latest news.">Brief me on Delhi</button>
+        </div>
+
+        <div id="conversation" class="conversation" aria-live="polite">
+          <div class="welcome-message">
+            <span class="message-index">01</span>
+            <div>
+              <p class="message-label">CITYSCOPE</p>
+              <p>Tell me a city and I’ll gather a current snapshot for you.</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message">Ask about a city</label>
+          <textarea id="message" name="message" rows="1" placeholder="Ask about a city..." required></textarea>
+          <button class="send-button" type="submit" aria-label="Send question"><span>Send</span><span class="arrow">↗</span></button>
+        </form>
+        <p class="disclaimer">Responses use live external data and may take a moment.</p>
+      </section>
+    </main>
+
+    <footer class="footer"><span>RESEARCH, WITH A SENSE OF PLACE.</span><span>LOCAL / 2026</span></footer>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
