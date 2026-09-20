@@ -11,6 +11,8 @@
 !static/**
 !templates/
 !templates/**
+!docs/
+!docs/**
 
 # Keep credentials and local environments private even if rules change later.
 .env
